@@ -273,7 +273,7 @@ console.log('23' > '18');
 
 
 
-// Truthy / Falsy
+/* // Truthy / Falsy
 
 // 5 falsy values: 0, '', undefined, null, NaN
 
@@ -295,4 +295,210 @@ if (height) {
     console.log('Height is defined.');
 } else {
     console.log('Height is undefined.');
+} */
+
+////////////////////////////////////////////////////////
+/* // Equality Operators: == vs. === 
+
+const age = 18;
+if(age === 18) console.log('Strict'); // Strict equality operator. True or false value.
+
+if (age == 18) console.log('Loose'); // Loose equality operator 
+// For clean code, avoid loose equality operator as much as possible.
+// Better to convert the value manually than using the loose equality operator.
+
+const favorite = Number(prompt("What's your favorite number?"));
+console.log(favorite);
+console.log(typeof favorite); // Number function converts this from string to number.
+
+if (favorite === 42) { // '42' == 42
+    console.log('Cool! 42 is the best number.')
+} else if(favorite === 7) {
+    console.log('7 is a cool number.')
+} else {
+    console.log("Number is not 42 or 7.")
+}
+
+if(favorite !== 42) console.log('Why not 42?'); */
+
+/* ///////////////////////////
+// Boolean logic
+
+age = 16
+
+//  A. Age is greater or equal to 20
+//  B. Age is less than 30
+
+// !A // Not A = true
+// A AND B // A and B = false
+// A OR B = true
+// !A AND B = true
+// A OR !B = false */
+
+
+/* ///////////////////////////////
+// Logical Operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); // true AND false = false
+console.log(hasDriversLicense || hasGoodVision); // true OR false = true
+console.log(!hasDriversLicense); // Not A = false
+
+
+// if(hasDriversLicense && hasGoodVision) {
+//     console.log('Sarah is able to drive.')
+// } else {
+//     console.log('Someone else should drive.')
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense || hasGoodVision || isTired); // true OR true OR true = true
+
+if(hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive.')
+} else {
+    console.log('Someone else should drive.')
+} */
+
+
+///////////////////////////////////
+// CODING CHALLENGE #3
+
+/* 
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
+
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score)
+3. Bonus1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+4. Bonus2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy
+
+Test data:
+Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+Data Bonus1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+Data Bonus2: Dolphins score 97, 112 and101. Koalas score 109, 95 and 106
+*/
+
+/* // data 1 - my attempt
+const teamDolphinScore1 = 96
+const teamKoalaScore1 = 88
+const teamDolphinScore2 = 108
+const teamKoalaScore2 = 91
+const teamDolphinScore3 = 89
+const teamKoalaScore3 = 110
+
+const teamDolphinAverage = (teamDolphinScore1 + teamDolphinScore2 + teamDolphinScore3) / 3;
+const teamKoalaAverage = (teamKoalaScore1 + teamKoalaScore2 + teamKoalaScore3) / 3;
+
+if(teamDolphinAverage > teamKoalaAverage) {
+    console.log('Team Dolphin has a higher average.')
+} else {
+    console.log('Team Koala has a higher average.')
+} */
+
+/* // data 1 - correct answer
+const scoreDolpins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+console.log(scoreDolpins);
+console.log(scoreKoalas);
+
+if (scoreDolpins > scoreKoalas) {
+    console.log('Dolphins win the trophy!');
+} else if (scoreKoalas > scoreDolpins) {
+    console.log('Koalas win the trophy!');
+} else if (scoreDolpins === scoreKoalas) {
+    console.log('Both win the trophy!');
+} */
+
+/* // Bonus 1 - my attempt
+const teamDolphinScore1 = 97
+const teamDolphinScore2 = 112
+const teamDolphinScore3 = 101
+const teamKoalaScore1 = 109
+const teamKoalaScore2 = 95
+const teamKoalaScore3 = 123
+
+const teamDolphinAverage = (teamDolphinScore1 + teamDolphinScore2 + teamDolphinScore3) / 3;
+console.log(teamDolphinAverage);
+const teamKoalaAverage = (teamKoalaScore1 + teamKoalaScore2 + teamKoalaScore3) / 3;
+console.log(teamKoalaAverage);
+
+const minimumScore = 100;
+const meetsMinimumScore = true;
+
+if(teamDolphinAverage === meetsMinimumScore) {
+    console.log('Team Dolphin averaged at least 100 points!')
+} else {
+    console.log('Team Dolphin did not meet the minimum score.')
+}
+
+if(teamKoalaAverage === meetsMinimumScore) {
+    console.log('Team Koala averaged at least 100 points!')
+} else {
+    console.log('Team Koala did not meet the minimum score.')
+} */
+
+// Bonus 1 - correct answer
+/* const scoreDolpins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 123) / 3;
+console.log(scoreDolpins);
+console.log(scoreKoalas);
+
+if (scoreDolpins > scoreKoalas && scoreDolpins >= 100) {
+    console.log('Dolphins win the trophy!');
+} else if (scoreKoalas > scoreDolpins && scoreKoalas >= 100) {
+    console.log('Koalas win the trophy!');
+} else if (scoreDolpins === scoreKoalas) {
+    console.log('Both win the trophy!');
+} */
+
+/* // Bonus 2
+const scoreDolpins = (97 + 112 + 81) / 3;
+const scoreKoalas = (109 + 95 + 86) / 3;
+console.log(scoreDolpins);
+console.log(scoreKoalas);
+
+if (scoreDolpins > scoreKoalas && scoreDolpins >= 100) {
+    console.log('Dolphins win the trophy!');
+} else if (scoreKoalas > scoreDolpins && scoreKoalas >= 100) {
+    console.log('Koalas win the trophy!');
+} else if (scoreDolpins === scoreKoalas && scoreDolpins >= 100 && scoreKoalas >= 100) {
+    console.log('Both win the trophy!');
+} else {
+    console.log('No one wins the trophy.');
+} */
+
+//////////// Take aways
+// Use the values directly (don't need to create variables for everything)
+// use logical operators directly in the if/else blocks
+
+
+///////////////////////////
+// The switch statement
+
+const day = 'friday';
+
+switch(day) {
+    case 'monday': // day === 'monday'
+        console.log('Plan my course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('enjoy the weekend');
+        break;
+    default:
+        console.log('Not a valid day.');
 }
