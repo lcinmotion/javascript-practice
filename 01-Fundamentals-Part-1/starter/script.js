@@ -149,14 +149,14 @@ const BMIMark1 = massMark1 / heightMark1 ** 2; // Needed to specify BMI as a mor
 const BMIJohn1 = massJohn1 / (heightJohn1 * heightJohn1);
 const markHigherBMI1 = BMIMark1 > BMIJohn1;
 
-console.log(BMIMark1, BMIJohn1, markHigherBMI1); 
+console.log(BMIMark1, BMIJohn1, markHigherBMI1);
 
 // Correct answer - data set 2
 const BMIMark2 = massMark2 / heightMark2 ** 2; // Needed to specify BMI as a more descriptive variable
 const BMIJohn2 = massJohn2 / (heightJohn2 * heightJohn2);
 const markHigherBMI2 = BMIMark2 > BMIJohn2;
 
-console.log(BMIMark2, BMIJohn2, markHigherBMI2); 
+console.log(BMIMark2, BMIJohn2, markHigherBMI2);
 */
 
 
@@ -217,7 +217,7 @@ Use the BMI example from Challenge #1, and the code you already wrote, and impro
 
 Your tasks:
 1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
-2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!" 
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
 
 Hint: Use an if/elsestatement
 */
@@ -298,12 +298,12 @@ if (height) {
 } */
 
 ////////////////////////////////////////////////////////
-/* // Equality Operators: == vs. === 
+/* // Equality Operators: == vs. ===
 
 const age = 18;
 if(age === 18) console.log('Strict'); // Strict equality operator. True or false value.
 
-if (age == 18) console.log('Loose'); // Loose equality operator 
+if (age == 18) console.log('Loose'); // Loose equality operator
 // For clean code, avoid loose equality operator as much as possible.
 // Better to convert the value manually than using the loose equality operator.
 
@@ -366,7 +366,7 @@ if(hasDriversLicense && hasGoodVision && !isTired) {
 ///////////////////////////////////
 // CODING CHALLENGE #3
 
-/* 
+/*
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
 
 Your tasks:
@@ -475,30 +475,89 @@ if (scoreDolpins > scoreKoalas && scoreDolpins >= 100) {
 // use logical operators directly in the if/else blocks
 
 
-///////////////////////////
-// The switch statement
+// ///////////////////////////
+// // The switch statement
 
-const day = 'friday';
+// const day = 'friday';
 
-switch(day) {
-    case 'monday': // day === 'monday'
-        console.log('Plan my course structure');
-        console.log('Go to coding meetup');
-        break;
-    case 'tuesday':
-        console.log('Prepare theory videos');
-        break;
-    case 'wednesday':
-    case 'thursday':
-        console.log('Write code examples');
-        break;
-    case 'friday':
-        console.log('Record videos');
-        break;
-    case 'saturday':
-    case 'sunday':
-        console.log('enjoy the weekend');
-        break;
-    default:
-        console.log('Not a valid day.');
-}
+// switch(day) {
+//     case 'monday': // day === 'monday'
+//         console.log('Plan my course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('Prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('Write code examples');
+//         break;
+//     case 'friday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('enjoy the weekend');
+//         break;
+//     default:
+//         console.log('Not a valid day.');
+// }
+
+// /////////////////
+// // Statements and Expressions
+
+// 3 + 4
+// 1991
+// true && false && !false
+
+// if (23 > 10) { // expression
+//     const str = '23 is bigger'; // statement
+// }
+
+// console.log(`I'm ${2037 - 1991} years old.`) // Template literal expects an expression, not a statement
+
+
+////////////////////
+// Conditional/Ternary Operator
+
+// const age = 31;
+// age >= 18 ? console.log('I like to drink wine.') : console.log('I like to drink water.');
+
+// const drink = age >= 18 ? 'wine' : 'water'; // expression
+// console.log(drink);
+
+// let drink2;
+// if (age > - 18) {
+//     drink2 = 'wine 🍷';
+// } else {
+//     drink2 = 'water 💧';
+// }
+// console.log(drink2);
+
+// console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`); // ternary expression in template literal
+
+
+//////////////////
+// Coding Challenge #4
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement (If it's easier for you, you can start with an if/elsestatement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 316.25”
+
+Test data:
+Data 1: Test for bill values 275, 40 and 430
+
+Hints: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+Value X is between 50 and 300, if it's >= 50 && <= 300
+*/
+
+// const bill = 275
+// const tip = (bill * 15 / 100);
+// const total = (bill + tip);
+// console.log(total);
+
+// const bill = 40
+// const tip = bill >= 50 && bill <= 300 ? bill * 15 / 100 : bill * 20 / 100;
+// console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
